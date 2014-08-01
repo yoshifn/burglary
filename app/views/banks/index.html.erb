@@ -1,8 +1,8 @@
 <h1>Banks</h1>
 
-<p><a href="/new_bank">Add a New Bank</a></p>
+<p><button><a href="/new_bank">Add a New Bank</a></button></p>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -18,10 +18,10 @@
     <tr>
           <td><%= bank.name %></td>
           <td><%= bank.location %></td>
-          <td><a href="/banks/<%= bank.id %>">Show</a>
+          <td><button><a href="/banks/<%= bank.id %>">Show</a></button>
         </td>
-      <td><a href="/banks/<%= bank.id %>/edit">Edit</a></td>
-      <td><a href="/banks/<%= bank.id %>/destroy">Destroy</a></td>
+      <td><button><a href="/banks/<%= bank.id %>/edit">Edit</a></button></td>
+      <td><button><a href="/banks/<%= bank.id %>/destroy">Destroy</a></button></td>
     </tr>
   <% end %>
   </tbody>

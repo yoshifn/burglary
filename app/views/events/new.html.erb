@@ -1,13 +1,21 @@
-<h1>New Event</h1>
+<h1>New Robbery</h1>
 
 <form action="/create_event">
   <div>
-    <label for="bank_id">bank_id</label><br />
-    <input id="bank_id" name="bank_id" type="text" />
+    <label for="robber_id">Robber</label><br />
+    <select name="robber_id">
+      <% @robbers.each do |robber| %>
+    <option value="<%= robber.id %>"><%= robber.name %></option>
+    <% end %>
+    </select>
   </div>
   <div>
-    <label for="robber_id">robber_id</label><br />
-    <input id="robber_id" name="robber_id" type="text" />
+    <label for="bank_id">Bank</label><br />
+    <select name="bank_id">
+    <% @banks.each do |bank| %>
+    <option value="<%= bank.id %>"><%= bank.name %></option>
+    <% end %>
+    </select>
   </div>
   <div>
     <input type="submit">

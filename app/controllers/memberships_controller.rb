@@ -9,6 +9,8 @@ class MembershipsController < ApplicationController
   end
 
   def new
+    @gangs = Gang.all
+    @robbers = Robber.all
   end
 
   def create

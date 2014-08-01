@@ -2,12 +2,20 @@
 
 <form action="/create_membership">
   <div>
-    <label for="robber_id">robber_id</label><br />
-    <input id="robber_id" name="robber_id" type="text" />
+    <label for="robber_id">Gang</label><br />
+    <select name="gang_id">
+      <% @gangs.each do |gang| %>
+      <option value="<%= gang.id %>"><%= gang.name %></option>
+      <% end %>
+    </select>
   </div>
   <div>
-    <label for="gang_id">gang_id</label><br />
-    <input id="gang_id" name="gang_id" type="text" />
+    <label for="gang_id">Robber</label><br />
+    <select name="robber_id">
+      <% @robbers.each do |robber| %>
+      <option value="<%= robber.id %>"><%= robber.name %></option>
+      <% end %>
+    </select>
   </div>
   <div>
     <input type="submit">

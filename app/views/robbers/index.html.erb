@@ -1,8 +1,8 @@
 <h1>Robbers</h1>
 
-<p><a href="/new_robber">Add a New Robber</a></p>
+<p><button><a href="/new_robber">Add a New Robber</a></button></p>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -18,10 +18,10 @@
     <tr>
           <td><%= robber.name %></td>
           <td><%= robber.email %></td>
-          <td><a href="/robbers/<%= robber.id %>">Show</a>
+      <td><button><a href="/robbers/<%= robber.id %>">Show</a></button>
         </td>
-      <td><a href="/robbers/<%= robber.id %>/edit">Edit</a></td>
-      <td><a href="/robbers/<%= robber.id %>/destroy">Destroy</a></td>
+      <td><button><a href="/robbers/<%= robber.id %>/edit">Edit</a></button></td>
+      <td><button><a href="/robbers/<%= robber.id %>/destroy">Destroy</a></button></td>
     </tr>
   <% end %>
   </tbody>

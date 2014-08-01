@@ -1,8 +1,8 @@
 <h1>Events</h1>
 
-<p><a href="/new_event">Add a New Event</a></p>
+<p><button><a href="/new_event">Add a New Event</a></button></p>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Bank</th>
@@ -18,10 +18,10 @@
     <tr>
           <td><%= event.bank_id %></td>
           <td><%= event.robber_id %></td>
-          <td><a href="/events/<%= event.id %>">Show</a>
+          <td><button><a href="/events/<%= event.id %>">Show</a></button>
         </td>
-      <td><a href="/events/<%= event.id %>/edit">Edit</a></td>
-      <td><a href="/events/<%= event.id %>/destroy">Destroy</a></td>
+      <td><button><a href="/events/<%= event.id %>/edit">Edit</a></button></td>
+      <td><button><a href="/events/<%= event.id %>/destroy">Destroy</a></button></td>
     </tr>
   <% end %>
   </tbody>

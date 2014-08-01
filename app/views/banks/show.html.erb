@@ -11,8 +11,8 @@
 <div>Bank's Robberies</div>
 <ul>
   <% @bank.events.each do |event| %>
-  <li><%= event.robber.name %></li>
+  <li><a href="http://overwhelming-wave-28-131019.usw1.nitrousbox.com/robbers/<%= event.robber.id %>"><%= event.robber.name %></a></li>
   <% end %>
 </ul> 
-<a href="/banks/<%= @bank.id %>/edit">Edit</a> |
-<a href="/banks/<%= @bank.id %>/destroy">Destroy</a>
+<button><a href="/banks/<%= @bank.id %>/edit">Edit</a></button>
+<button><a href="/banks/<%= @bank.id %>/destroy">Destroy</a></button>

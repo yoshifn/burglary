@@ -9,6 +9,8 @@ class EventsController < ApplicationController
   end
 
   def new
+    @banks = Bank.all
+    @robbers = Robber.all
   end
 
   def create

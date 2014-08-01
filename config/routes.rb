@@ -85,6 +85,7 @@ Rails.application.routes.draw do
   #------------------------------
   get '/new_membership_for_gang/:id' => 'membership#newrobber'
   get '/new_membership_for_robber/:id' => 'membership#newgang'
+  root :to => 'gangs#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

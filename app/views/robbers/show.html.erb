@@ -11,14 +11,14 @@
 <div>Robber's Gangs</div>
 <ul>
   <% @robber.memberships.each do |membership| %>
-  <li><%= membership.gang.name %></li>
+  <li><a href="http://overwhelming-wave-28-131019.usw1.nitrousbox.com/gangs/<%= membership.gang.id %>"><%= membership.gang.name %></a></li>
   <% end %>
 </ul>  
 <div>Robber's Robberies</div>
 <ul>
   <% @robber.events.each do |event| %>
-  <li><%= event.bank.name %></li>
+  <li><a href="http://overwhelming-wave-28-131019.usw1.nitrousbox.com/banks/<%= event.bank.id %>"><%= event.bank.name %></a></li>
   <% end %>
 </ul>  
-<a href="/robbers/<%= @robber.id %>/edit">Edit</a> |
-<a href="/robbers/<%= @robber.id %>/destroy">Destroy</a>
+<button><a href="/robbers/<%= @robber.id %>/edit">Edit</a></button>
+<button><a href="/robbers/<%= @robber.id %>/destroy">Destroy</a></button>

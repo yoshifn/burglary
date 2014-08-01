@@ -11,8 +11,8 @@
 <div>Gang's Robbers</div>
 <ul>
   <% @gang.memberships.each do |membership| %>
-  <li><%= membership.robber.name %></li>
+  <li><a href="http://overwhelming-wave-28-131019.usw1.nitrousbox.com/robbers/<%= membership.robber.id %>"><%= membership.robber.name %></a></li>
   <% end %>
 </ul>  
-<a href="/gangs/<%= @gang.id %>/edit">Edit</a> |
-<a href="/gangs/<%= @gang.id %>/destroy">Destroy</a>
+<button><a href="/gangs/<%= @gang.id %>/edit">Edit</a></button>
+<button><a href="/gangs/<%= @gang.id %>/destroy">Destroy</a></button>
