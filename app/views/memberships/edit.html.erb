@@ -1,0 +1,17 @@
+<h1>Editing Membership #<%= @membership.id %></h1>
+
+<form action="/memberships/<%= @membership.id %>/update">
+  <div>
+    <label for="robber_id">robber_id</label><br />
+    <input id="robber_id" name="robber_id" value="<%= @membership.robber_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="gang_id">gang_id</label><br />
+    <input id="gang_id" name="gang_id" value="<%= @membership.gang_id  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

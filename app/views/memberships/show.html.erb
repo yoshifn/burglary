@@ -1,0 +1,13 @@
+<h1>Membership #<%= @membership.id %></h1>
+
+<div>
+  <strong>Robber</strong>:<br />
+  <p><%= @membership.robber_id %></p>
+</div>
+<div>
+  <strong>Gang</strong>:<br />
+  <p><%= @membership.gang_id %></p>
+</div>
+
+<a href="/memberships/<%= @membership.id %>/edit">Edit</a> |
+<a href="/memberships/<%= @membership.id %>/destroy">Destroy</a>

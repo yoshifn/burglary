@@ -1,0 +1,29 @@
+<h1>Memberships</h1>
+
+<p><a href="/new_membership">Add a New Membership</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Robber</th>
+      <th>Gang</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @memberships.each do |membership| %>
+    <tr>
+          <td><%= membership.robber_id %></td>
+          <td><%= membership.gang_id %></td>
+          <td><a href="/memberships/<%= membership.id %>">Show</a>
+        </td>
+      <td><a href="/memberships/<%= membership.id %>/edit">Edit</a></td>
+      <td><a href="/memberships/<%= membership.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,29 @@
+<h1>Gangs</h1>
+
+<p><a href="/new_gang">Add a New Gang</a></p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Lord</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @gangs.each do |gang| %>
+    <tr>
+          <td><%= gang.name %></td>
+          <td><%= gang.lord %></td>
+          <td><a href="/gangs/<%= gang.id %>">Show</a>
+        </td>
+      <td><a href="/gangs/<%= gang.id %>/edit">Edit</a></td>
+      <td><a href="/gangs/<%= gang.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

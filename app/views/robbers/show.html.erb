@@ -1,0 +1,24 @@
+<h1>Robber #<%= @robber.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @robber.name %></p>
+</div>
+<div>
+  <strong>Email</strong>:<br />
+  <p><%= @robber.email %></p>
+</div>
+<div>Robber's Gangs</div>
+<ul>
+  <% @robber.memberships.each do |membership| %>
+  <li><%= membership.gang.name %></li>
+  <% end %>
+</ul>  
+<div>Robber's Robberies</div>
+<ul>
+  <% @robber.events.each do |event| %>
+  <li><%= event.bank.name %></li>
+  <% end %>
+</ul>  
+<a href="/robbers/<%= @robber.id %>/edit">Edit</a> |
+<a href="/robbers/<%= @robber.id %>/destroy">Destroy</a>

@@ -1,0 +1,13 @@
+<h1>Event #<%= @event.id %></h1>
+
+<div>
+  <strong>Bank</strong>:<br />
+  <p><%= @event.bank_id %></p>
+</div>
+<div>
+  <strong>Robber</strong>:<br />
+  <p><%= @event.robber_id %></p>
+</div>
+
+<a href="/events/<%= @event.id %>/edit">Edit</a> |
+<a href="/events/<%= @event.id %>/destroy">Destroy</a>

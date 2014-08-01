@@ -1,0 +1,29 @@
+<h1>Robbers</h1>
+
+<p><a href="/new_robber">Add a New Robber</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @robbers.each do |robber| %>
+    <tr>
+          <td><%= robber.name %></td>
+          <td><%= robber.email %></td>
+          <td><a href="/robbers/<%= robber.id %>">Show</a>
+        </td>
+      <td><a href="/robbers/<%= robber.id %>/edit">Edit</a></td>
+      <td><a href="/robbers/<%= robber.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

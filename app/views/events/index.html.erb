@@ -1,0 +1,29 @@
+<h1>Events</h1>
+
+<p><a href="/new_event">Add a New Event</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bank</th>
+      <th>Robber</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @events.each do |event| %>
+    <tr>
+          <td><%= event.bank_id %></td>
+          <td><%= event.robber_id %></td>
+          <td><a href="/events/<%= event.id %>">Show</a>
+        </td>
+      <td><a href="/events/<%= event.id %>/edit">Edit</a></td>
+      <td><a href="/events/<%= event.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
